@@ -1,4 +1,4 @@
-import logo from '@/assets/logo.asset.json';
+import logo from '@/assets/hooked-home-logo.png.asset.json';
 import pelonis from '@/assets/pelonis.asset.json';
 import blackHouse from '@/assets/black-house.asset.json';
 import sageHouse from '@/assets/sage-house.asset.json';
