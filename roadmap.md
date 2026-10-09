@@ -1,4 +1,4 @@
 # Hooked Home replica
-- [ ] Recreate the original homepage and visual identity.
-- [ ] Add working category navigation, search, and article views.
-- [ ] Verify the page and interactions.
+- [x] Recreate the original homepage and visual identity.
+- [x] Add working category navigation, search, and article views.
+- [x] Verify the page and interactions.
