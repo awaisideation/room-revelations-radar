@@ -217,13 +217,13 @@ a { transition: color 180ms ease; }
 .hero-popular button { font-size: 12px; height: 30px; padding: 0 8px; color: var(--home-on-photo); }
 .hero-popular button:hover { background: color-mix(in oklch, var(--home-on-photo) 15%, transparent); }
 .home-header { min-height: 86px; padding: 8px 40px; display: flex; justify-content: space-between; align-items: center; gap: 24px; border-bottom: 1px solid var(--home-border); background: var(--home-surface); }
-.home-logo { width: 150px; flex: none; }
-.home-logo img { height: 68px; width: 100%; object-fit: contain; }
+.home-logo { width: 190px; flex: none; }
+.home-logo img { height: 68px; width: 100%; object-fit: cover; }
 .home-header-links { display: flex; align-items: center; gap: 16px; color: var(--home-ink); }
 .home-header-links a { font-size: 13px; }
 .home-header-links a:hover { background: var(--secondary); }
 .thumb-home { color: var(--home-ink); }
-.home-container { width: min(100% - 80px, 1120px); margin: 0 auto; }
+.thumb-home .home-container { width: min(100% - 80px, 1120px); margin: 0 auto; }
 .home-projects { padding: 38px 0 48px; }
 .home-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
 .home-section-heading h2 { font: 700 26px/1.35 var(--font-interface); }
@@ -280,7 +280,7 @@ a { transition: color 180ms ease; }
 .empty-results { padding: 40px 0; font-family: var(--font-editorial); }
 @media (max-width: 760px) {
   .home-header { padding: 8px 20px; min-height: 76px; gap: 12px; }
-  .home-logo { width: 120px; }
+  .home-logo { width: 150px; }
   .home-logo img { height: 58px; }
   .home-header-links { gap: 0; }
   .home-header-links a:not(:last-child) { display: none; }
@@ -295,7 +295,7 @@ a { transition: color 180ms ease; }
   .hero-search-caption { font-size: 10px; padding-left: 4px; max-width: 140px; }
   .hero-search-caption svg { flex: none; }
   .hero-cta { padding: 0 14px; font-size: 13px; }
-  .home-container { width: calc(100% - 40px); }
+  .thumb-home .home-container { width: calc(100% - 40px); }
   .home-projects { padding-top: 28px; padding-bottom: 32px; }
   .home-section-heading { align-items: start; gap: 8px; }
   .home-section-heading h2 { font-size: 22px; }
