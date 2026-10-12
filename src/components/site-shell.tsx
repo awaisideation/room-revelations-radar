@@ -1,4 +1,4 @@
-import { Link, useNavigate } from '@tanstack/react-router';
+import { Link, useNavigate, useRouterState } from '@tanstack/react-router';
 import { useState } from 'react';
 import { ChevronDown, Mail, Menu, Search, X, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,15 @@ export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
+  const isHome = useRouterState({ select: state => state.location.pathname === '/' });
+  if (isHome) return <header className="home-header">
+    <Link to="/" className="home-logo" aria-label="Quick Home Experts homepage"><img src={brandLogo} alt="Quick Home Experts" /></Link>
+    <nav aria-label="Main navigation" className="home-header-links">
+      <Button asChild variant="ghost"><Link to="/category/$category" params={{ category: 'home-improvement' }}>Home projects</Link></Button>
+      <Button asChild variant="ghost"><Link to="/category/$category" params={{ category: 'reviews' }}>Reviews</Link></Button>
+      <Button asChild variant="outline"><Link to="/contact">Contact us <Mail size={16} /></Link></Button>
+    </nav>
+  </header>;
   return <>
     <header className="site-header">
       <Button asChild className="contact-link"><Link to="/contact"><Mail size={12} /> Contact</Link></Button>

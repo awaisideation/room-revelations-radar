@@ -11,5 +11,6 @@
 
 ## Architecture
 - Keep shared editorial navigation and footer in the root shell, with separate content routes, so every page preserves the same website identity.
+- Select the homepage header from the shared shell by the active pathname and scope homepage styling under its own classes, so editorial routes retain their existing presentation.
 - Store replica articles and category definitions in a browser-safe content module, with downloaded media referenced through asset pointers, so the replica needs no server or database.
 - Article detail pages show previews and link to the original full article; contact submissions must not claim delivery without a connected service.
